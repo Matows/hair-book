@@ -8,7 +8,7 @@ function createRdv($prestations, $rdvtime, $who="anonyme", $hairdresser="n'impor
 	$totPrice=0;
 	$totTime=0;
 	foreach ($prestations as $prestation) {
-		$presStockage=$presStockage+$prestation["name"]+", ";
+		$presStockage=$presStockage.$prestation["name"].", ";
 		$totTime+=$prestation["time"];
 		$totPrice+=$prestation["price"];
 	}
