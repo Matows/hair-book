@@ -71,7 +71,7 @@ $_type_cheveux = [
     'qualité' => ['frisé', 'plat'],
     'couleur' => ['roux', 'noir', 'brun', 'blond']
 ];
-$_PAGE_NAME=>[
+$_PAGE_LIST = [
         'index'=>'Accueil',
         'RendezVous'=>'Rendez-Vous',
         'Presentation'=>'Presentation du salon',
