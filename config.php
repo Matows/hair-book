@@ -61,7 +61,7 @@ $_prestations = [
     ],
     //Lissage
     'Lissage Brésilien' => [
-        'prix' =>'longueur'=>['79,89,99'],
+        'prix' =>['longueur'=>['79,89,99']],
         'type cheveux' => 'all',
         'description' => 'soin des cheveux comblant le manque de kératine.',
     ],
