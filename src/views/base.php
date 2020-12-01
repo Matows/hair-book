@@ -12,11 +12,11 @@
             <ul class="Admin"><li>Administration</li></ul>
         </aside>
         <nav>
-            <ul class="Menu-Deroul">
-                <li>Rendez-Vous</li>
-                <li>Présentation</li>
-                <li>Prestations</li>
-                <li>Contact</li>
+            <ul class="Menu">
+                <li><a href="./index.php?PAGE=RendezVous">Rendez-Vous</a></li>
+                <li><a href="./index.php?PAGE=Presentation">Présentation</a></li>
+                <li><a href="./index.php?PAGE=Prestations">Prestations</a></li>
+                <li><a href="./index.php?PAGE=Contact">Contact</a></li>
             </ul>
         </nav>
         <h2><?= $_page_name ?></h2>
