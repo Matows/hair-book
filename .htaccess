@@ -1,7 +1,6 @@
+Options -Indexes +SymLinksIfOwnerMatch
 RewriteEngine On
 
 RewriteRule ^static/([a-z0-9-]+)$ static/$1 [L]
-RewriteRule ^([a-z0-9-]+)$ index.php?page=$1 [L]
-
-Options -Indexes
-
+#RewriteRule ^([a-z0-9-]+)$ index.php?page=$1 [L]
+RewriteRule ^(.+)$ index.php?page=$1 [L]
