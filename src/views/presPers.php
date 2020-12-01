@@ -1,10 +1,10 @@
-<div>
+<section>
 	<h1>Présentation du personnel :</h1>
 	<div>
 		<div>
 			<h2>Directeur</h2>
 			<p>nomDirecteur</p>
-			<img src="../../img/directeur.jpg">
+			<img src="<?= $_STATIC ?>/img/directeur.jpg"></img>
 		</div>
 		<div>
 			<h2>Employés :</h2>
@@ -27,4 +27,4 @@
 			</ul>
 		</div>
 	</div>
-</div>
+</section>
