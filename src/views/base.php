@@ -19,9 +19,9 @@
             </ul>
         </nav>
         <h2><?= $_page_name ?></h2>
-        <section>
+        <main>
             <?php include(__DIR__ . $_page . '.php'); ?>
-        </section>
+        </main>
     <footer>
         <p>Copy-left</p>
     </footer>
