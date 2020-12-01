@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title><?= $_website_name ?></title>
     <link rel="stylesheet" type="text/css" href="https://s.sinux.sh/bulma/bulma.min.css" />
-    <!--<link rel="stylesheet" type="text/css" href="<?= //$_ROOT_URL ?>/static/css/style.css" />-->
+    <link rel="stylesheet" type="text/css" href="<?= $_ROOT_URL ?>/static/css/style.css" />
 </head>
 <body>
     <header class="section">
