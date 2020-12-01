@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="utf-8"/>
-    <title><?= $_WEBSITE_NAME ? $_WEBSITE_NAME : "Mon super site" ?></title>
+    <meta charset="UTF-8" />
+    <title><?= $_website_name ?></title>
+    <link rel="stylesheet" type="text/css" href="https://s.sinux.sh/bulma/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
-<header>
-    <h1><?=$_PAGE_NAME?></h1>
-    <nav>
-        <ul>
-            <li><a href="?page=accueil">Accueil</a></li>
-        </ul>
-    </nav>
-</header>
 <body>
-
-    <?php
-        include(__DIR__ . $_PAGE . '.php');
-    ?>
-
+        <h1 id="Titre"><?= $_website_name ?></h1>
+        <aside>
+            <ul class="Admin"><li>Administration</li></ul>
+        </aside>
+        <nav>
+            <ul class="Menu-Deroul">
+                <li>Rendez-Vous</li>
+                <li>Présentation</li>
+                <li>Prestations</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <h2><?= $_page_name ?></h2>
+        <main>
+            <?php include(__DIR__ . $_page . '.php'); ?>
+        </main>
+    <footer>
+        <p>Copy-left</p>
+    </footer>
 </body>
-<footer>
-    <!-- TODO -->
-</footer>
 </html>
