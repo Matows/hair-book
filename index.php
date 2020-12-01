@@ -7,6 +7,8 @@ error_reporting(E_ALL);
 
 session_start();
 
+$_ROOT_URL = "/hairbook";
+
 // TODO : Include vendor
 include("db.php");
 include("src/functions.php");
