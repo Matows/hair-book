@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title><?= $_website_name ?></title>
+    <link rel="stylesheet" type="text/css" href="https://s.sinux.sh/bulma/all.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
