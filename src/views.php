@@ -8,4 +8,4 @@ if (isset($_GET['page'])) {
     }
 }
 
-$_PAGE_NAME = $_PAGE_LIST[_$PAGE];
+$_PAGE_NAME = $_PAGE_LIST[$_PAGE];
