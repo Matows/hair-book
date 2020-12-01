@@ -9,7 +9,7 @@ $_horaires = [
     'Mardi'=>['8h-12h', '14h-17h'],
     'Mercredi'=>['8h-12h', '14h-17h'],
     'Jeudi'=>['8h-12h', '14h-17h'],
-    'Vendredi'=>['8h-12h', '14h-17h',
+    'Vendredi'=>['8h-12h', '14h-17h'],
     'Samedi'=>['8h-12h', '14h-17h'],
     'Dimanche'=>['Fermé']
     ];

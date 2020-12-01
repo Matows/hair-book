@@ -9,3 +9,5 @@ if (isset($_GET['page'])) {
 }
 
 $_PAGE_NAME = $_PAGE_LIST[$_PAGE];
+
+include(__DIR__ . '/views/base.php');
