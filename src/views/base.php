@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title><?= $_website_name ?></title>
     <link rel="stylesheet" type="text/css" href="https://s.sinux.sh/bulma/all.min.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
 </head>
 <body>
         <h1 id="Titre"><?= $_website_name ?></h1>
@@ -19,9 +19,9 @@
                 <li><a href="./index.php?PAGE=Contact">Contact</a></li>
             </ul>
         </nav>
-        <h2><?= $_page_name ?></h2>
+        <h2><?= $_PAGE_NAME ?></h2>
         <main>
-            <?php include(__DIR__ . $_page . '.php'); ?>
+            <?php include(__DIR__ . $_PAGE . '.php'); ?>
         </main>
     <footer>
         <p>Copy-left</p>

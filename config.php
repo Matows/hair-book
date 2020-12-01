@@ -4,7 +4,7 @@
  *
  */
 $_website_name= 'HairBook';
-$_horaires = array[
+$_horaires = [
     'Lundi'=> ['8h-12h', '14h-17h'],
     'Mardi'=>['8h-12h', '14h-17h'],
     'Mercredi'=>['8h-12h', '14h-17h'],
@@ -14,7 +14,6 @@ $_horaires = array[
     'Dimanche'=>['Fermé']
                   ];
 // $_horaires = ['8h-18h'];
-
 $_prestations = [
     //coupes
     'Coupe simple' => [
@@ -72,3 +71,10 @@ $_type_cheveux = [
     'qualité' => ['frisé', 'plat'],
     'couleur' => ['roux', 'noir', 'brun', 'blond']
 ];
+$_PAGE_NAME=>[
+        'index'=>'Accueil',
+        'RendezVous'=>'Rendez-Vous',
+        'Presentation'=>'Presentation du salon',
+        'Prestations'=>'Prestations proposées',
+        'Contact'=>'Contact',
+             ];
