@@ -96,15 +96,16 @@ $_liste_coiffeur = [
             "specialite"=> "évenementiel (mariage....)",
             "description" => "CAP à Lioncourt.... blalblabla"],
 
-  ["nom" => 
-            "Web", "Luc" => "truc",
-            "specialite" => "évenementiel (mariage....)",
-            "metier" => 'Visagiste'; 
-            "description" => "CAP à Lioncourt.... blalblabla"],
-  ["nom" => 
-            "Empereur","Jean-Charles" => "truc",
-            "metier" => 'Coiffeur'; 
-            "specialite" => "évenementiel (mariage....)",
-            "description" => "Aggregation cheveux à Lioncourt..."],
+    ["nom" => "Web",
+     "prenom" =>"Luc",
+     "specialite" => "évenementiel (mariage....)",
+     "metier" => 'Visagiste'; 
+     "description" => "CAP à Lioncourt.... blalblabla"
+  ],
+  ["nom" =>'Empereur'
+   "prenom"=>'Jean-Charles',
+   "metier" => 'Coiffeur',
+   "specialite" => "évenementiel (mariage....)",
+    "description" => "Aggregation cheveux à Lioncourt..."],
 ];
  ?>
