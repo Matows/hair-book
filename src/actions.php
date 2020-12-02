@@ -6,3 +6,5 @@ $_PAGE_LIST = [
     'prestation'=>'Prestations proposées',
     'contact'=>'Contact', // Not in views yet
 ];
+
+include(__DIR__ . "/actions/page_var.php");
