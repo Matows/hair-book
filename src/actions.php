@@ -7,4 +7,5 @@ $_PAGE_LIST = [
     'contact'=>'Contact', // Not in views yet
 ];
 
-include(__DIR__ . "/actions/page_var.php");
+include(__DIR__ . "/actions/page_vars.php");
+include(__DIR__ . "/actions/action_prestation.php");
