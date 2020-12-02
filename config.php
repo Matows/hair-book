@@ -71,3 +71,22 @@ $_type_cheveux = [
     'qualité' => ['frisé', 'plat'],
     'couleur' => ['roux', 'noir', 'brun', 'blond']
 ];
+
+$_liste_coiffeur = [
+  ["nom" => 
+            "Java","David" => "truc",
+            "metier" => 'Coiffeur'; 
+            "specialite"=> "évenementiel (mariage....)",
+            "description" => "CAP à Lioncourt.... blalblabla"],
+
+  ["nom" => 
+            "Web", "Luc" => "truc",
+            "specialite" => "évenementiel (mariage....)",
+            "metier" => 'Visagiste'; 
+            "description" => "CAP à Lioncourt.... blalblabla"],
+  ["nom" => 
+            "Empereur","Jean-Charles" => "truc",
+            "metier" => 'Coiffeur'; 
+            "specialite" => "évenementiel (mariage....)",
+            "description" => "Aggregation cheveux à Lioncourt..."],
+];
