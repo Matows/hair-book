@@ -1,19 +1,10 @@
 <?php
-function createRdv($prestations, $rdvtime, $who="anonyme", $hairdresser="n'importe")
+function createRdv($prestation, $rdvtime, $personne, $who, [$profilCap])
 {
 	global $db;
-	//format $rdvHour='yyyy-mm-dd hh:mm:00'
-	//format $prestation (une seule) : array("name" => name, "time" => time(min), "price" => price)
-	//format $prestations : [$prestation]
-	$presStockage="";
-	$totalPrice=0;
-	$totalTime=0;
-	foreach ($prestations as $prestation) {
-		$presStockage=$presStockage.$prestation["name"].", ";
-		$totalTime+=$prestation["time"];
-		$totalPrice+=$prestation["price"];
+	if (!isset($profilCap)) {
+		$profilCap="---";
 	}
-	$presStockage=substr($presStockage, 0, strlen($presStockage)-3);
-	$sql="INSERT INTO `rdvs` (`id`, `prestations`, `maxprice`, `who`, `time(min)`, `hairdresser`, `rdvHour`) VALUES (NULL, $presStockage, $totalPrice, $who, $totalTime, $hairdresser, $rdvtime);";
+	$sql="INSERT INTO `rdvs` (`id`, `prestation`, `date`, `client`,`personnel`, `id_profile`) VALUES (NULL, $prestation, $rdvtime, $personne, $who, $profilCap);";
     	mysqli_query($db, $sql);
 }
