@@ -90,11 +90,11 @@ $_type_cheveux = [
 ];
 
 $_liste_coiffeur = [
-  ["nom" => 
-            "Java","David" => "truc",
-            "metier" => 'Coiffeur'; 
-            "specialite"=> "évenementiel (mariage....)",
-            "description" => "CAP à Lioncourt.... blalblabla"],
+  ["nom" =>"Java",
+   "prenom"=>"David",
+   "metier" => 'Coiffeur'; 
+   "specialite"=> "évenementiel (mariage....)",
+   "description" => "CAP à Lioncourt.... blalblabla"],
 
     ["nom" => "Web",
      "prenom" =>"Luc",
