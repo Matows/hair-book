@@ -15,7 +15,7 @@
             </aside>
             <nav>
                 <ul class="Menu">
-                <li><a href="./index.php?page=Accueil">Accueil</a></li>
+                <li><a href="./index.php?page=accueil">Accueil</a></li>
                 <li><a href="./index.php?page=rdv">Rendez-Vous</a></li>
                 <li><a href="./index.php?page=personnel">Présentation du personnel</a></li>
                 <li><a href="./index.php?page=prestation">Prestations</a></li>

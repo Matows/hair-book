@@ -10,8 +10,12 @@
             <h2 class="title is-3">Horaires</h2>
                 <?php
                     foreach ($_horaires as $day => $heures) {
-                        if (!empty($heures)) {
+
+                        if (!empty($heures) && count($heures) == 2) {
                             echo "<p>$day : $heures[0] et $heures[1]</p>";
+
+                        } else if (!empty($heures) && count($heures) == 1) {
+                            echo "<p>$day : $heures[0]";
                         } else {
                             echo "<p>$day : fermé</p>";
                         }
