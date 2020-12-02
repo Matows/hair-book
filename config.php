@@ -107,3 +107,4 @@ $_liste_coiffeur = [
             "specialite" => "évenementiel (mariage....)",
             "description" => "Aggregation cheveux à Lioncourt..."],
 ];
+ ?>
