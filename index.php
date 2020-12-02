@@ -10,6 +10,7 @@ session_start();
 $_ROOT_URL = "/hairbook";
 
 // TODO : Include vendor
+include("config.php");
 include("db.php");
 include("src/functions.php");
 include("src/actions.php");
