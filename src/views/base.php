@@ -11,7 +11,7 @@
         <div class="container">
             <h1 class="title" id="Titre"><?= $_website_name ?></h1>
             <aside>
-                <ul class="Admin"><li>Administration</li></ul>
+                <ul class="Admin"><li><a href="./index.php?page=Administration">Administration</a></li></ul>
             </aside>
             <nav>
                 <ul class="Menu">
