@@ -33,7 +33,10 @@ function formulaireRdv()
 {
 	global $_prestations;
 	global $_liste_personnel;
-
+	global $conn;
+	$sql = 'SELECT * FROM rdv where date >= CURDATE()';
+	$res = mysqli_query($conn, $sql);
+	$tab = mysqli_fetch_all($res, MYSQLI_ASSOC);
 	$stringRet="
 	<form method='post'>
 		<article>

@@ -1,7 +1,9 @@
 <?php
 function createRdv($prestation, $rdvtime, $personne, $who, $profilCap="---")
 {
-    global $db;
-    $sql="INSERT INTO `rdv` (`id`, `prestation`, `date`,duration, `client`,`personnel`, `profilCap`) VALUES (NULL, $prestation, $rdvtime, $personne, $who, $profilCap);";
-    mysqli_query($db, $sql);
+    global $conn;
+    global $_prestations;
+    $res=$_prestations[$prestation]['duree maximale'];
+    $sql="INSERT INTO rdv(`prestation`, `date`,`duration`, `client`,`personnel`, `profilCap`) VALUES ('$prestation','$rdvtime','$res',$personne,'$who','$profilCap');";
+    mysqli_query($conn, $sql);
 }

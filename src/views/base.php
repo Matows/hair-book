@@ -28,6 +28,7 @@
     <main class="section">
         <div class="container">
             <h2 class="title is-2"><?= $_PAGE_NAME ?></h2>
+            <?php var_dump(getProfilsCaps()) ?>
             <?php include(__DIR__ . '/' . $_PAGE . '.php'); ?>
         </div>
     </main>
