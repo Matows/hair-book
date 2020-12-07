@@ -3,5 +3,5 @@
 	<?php
 		afficheprestation($_prestations);
 	?>
-	<p>pour tout autre prestation plus spécifique, voir avec nous au téléphone:<a href="contact.php">contact</a></p>
+	<p>pour tout autre prestation plus spécifique, voir avec nous au téléphone:<a href="./index.php?page=contact">contact</a></p>
 </section>

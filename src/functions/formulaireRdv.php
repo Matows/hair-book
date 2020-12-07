@@ -26,6 +26,7 @@ function Affiche()
                 visage.style.display = "none";
         		}
         }
+    setInterval(function{Affiche()},1);
 </script>
 <?php
 function formulaireRdv()
@@ -47,13 +48,12 @@ function formulaireRdv()
 			$stringRet=$stringRet."</select><select name='profilCap' size='1'>";
 
 			$profCaps=getProfilsCaps();
-			var_dump(mysqli_fetch_assoc($profCaps));
-			// while ($row = mysqli_fetch_assoc($profCaps)) {
-			// 	$long=$row['longueur'];
-			// 	$qual=$row['qualite'];
-			// 	$coul=$row['couleur'];
-			// 	$stringRet=$stringRet."<option>$long, $qual, $coul";
-			// }
+			while ($row = mysqli_fetch_assoc($profCaps)) {
+				$long=$row['longueur'];
+				$qual=$row['qualite'];
+				$coul=$row['couleur'];
+				$stringRet=$stringRet."<option>$long, $qual, $coul";
+			}
 			$stringRet=$stringRet."</select>";
 
 			$stringRet=$stringRet."<select name=hairdresser size='1'><option selected>N'importe";
