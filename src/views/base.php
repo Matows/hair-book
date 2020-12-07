@@ -20,6 +20,7 @@
                 <li><a href="./index.php?page=personnel">Présentation du personnel</a></li>
                 <li><a href="./index.php?page=prestation">Prestations</a></li>
                 <li><a href="./index.php?page=contact">Contact</a></li>
+                <li><a href="./index.php?page=formulaire_base">formulaire capilaire</a></li>
                 </ul>
             </nav>
         </div>
