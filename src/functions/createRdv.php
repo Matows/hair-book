@@ -2,6 +2,6 @@
 function createRdv($prestation, $rdvtime, $personne, $who, $profilCap="---")
 {
     global $db;
-    $sql="INSERT INTO `rdvs` (`id`, `prestation`, `date`, `client`,`personnel`, `id_profile`) VALUES (NULL, $prestation, $rdvtime, $personne, $who, $profilCap);";
+    $sql="INSERT INTO `rdv` (`id`, `prestation`, `date`,duration, `client`,`personnel`, `profilCap`) VALUES (NULL, $prestation, $rdvtime, $personne, $who, $profilCap);";
     mysqli_query($db, $sql);
 }
