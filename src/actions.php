@@ -4,7 +4,7 @@ $_PAGE_LIST = [
     'rdv'=>'Rendez-Vous', // Not in views yet
     'personnel'=>'Presentation du personnel',
     'prestation'=>'Prestations proposées',
-    'contact'=>'Contact', // Not in views yet
+    'contact'=>'Contact',
 ];
 
 include(__DIR__ . "/actions/page_vars.php");
