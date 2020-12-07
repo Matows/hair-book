@@ -38,11 +38,11 @@ function formulaireRdv()
 	<form method='post'>
 		<article>
 
-			<h5>Prestations</h5><select name='prestations' size='1'>";
+			<h5>Prestations</h5><select name='prestations' size='1'><option value='' selected>---";
 
 			foreach ($_prestations as $prestation => $infos) {
 				$typePres=$infos['type prestations'];
-				$stringRet=$stringRet."<option id=$typePres>$prestation";
+				$stringRet=$stringRet."<option value=$typePres>$prestation";
 			}
 
 			$stringRet=$stringRet."</select><select name='profilCap' size='1'>";
