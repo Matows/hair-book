@@ -25,8 +25,8 @@ function Affiche()
                 coiffure2.style.display = "none";
                 visage.style.display = "none";
         		}
-        }
-    setInterval(function{Affiche()},1);
+    }
+    window.setInterval(function(){Affiche()},1);
 </script>
 <?php
 function formulaireRdv()
@@ -71,9 +71,9 @@ function formulaireRdv()
 					$stringRet=$stringRet."<option>$name";
 				}
 			}
-
+			$today=date('yyyy-MM-ddThh:mm');
 			$stringRet=$stringRet."</select>
-			<article><label for='dateRdv'>Date et heure du rendez-vous :</label><input type='datetime-local' name='dateRdv' min=date('yyyy-MM-ddThh:mm')></article><article><input type='submit' method='post' name ='setNewRdv' value='Définir un nouveau rendez-vous'></article></form>";
+			<article><label for='dateRdv'>Date et heure du rendez-vous :</label><input type='datetime-local' name='dateRdv' min=$today></article><article><input type='submit' method='post' name ='setNewRdv' value='Définir un nouveau rendez-vous'></article></form>";
 	return $stringRet;
 }
 ?>
