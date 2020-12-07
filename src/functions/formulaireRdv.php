@@ -40,19 +40,19 @@ function formulaireRdv()
 				$stringRet=$stringRet."<option id=$typePres>$prestation";
 			}
 
-			$stringRet=$stringRet."</select><select name='profilCap' size='1'>"
+			$stringRet=$stringRet."</select><select name='profilCap' size='1'>";
 
 			$profCaps=getProfilsCaps();
-			var_dump(mysqli_fetch_assoc($profCaps))
+			var_dump(mysqli_fetch_assoc($profCaps));
 			// while ($row = mysqli_fetch_assoc($profCaps)) {
 			// 	$long=$row['longueur'];
 			// 	$qual=$row['qualite'];
 			// 	$coul=$row['couleur'];
 			// 	$stringRet=$stringRet."<option>$long, $qual, $coul";
 			// }
-			$stringRet=$stringRet."</select>"
+			$stringRet=$stringRet."</select>";
 
-			$stringRet=$stringRet."<select name=hairdresser size='1'><option selected>N'importe"
+			$stringRet=$stringRet."<select name=hairdresser size='1'><option selected>N'importe";
 
 			foreach ($_liste_personnel as $personne) {
 				if $personne['metier']=='Coiffeur'{
@@ -60,7 +60,7 @@ function formulaireRdv()
 					$stringRet=$stringRet."<option>$name";
 				}
 			}
-			$stringRet=$stringRet."</select><select name=visagiste size='1'><option selected>N'importe"
+			$stringRet=$stringRet."</select><select name=visagiste size='1'><option selected>N'importe";
 			foreach ($_liste_personnel as $personne) {
 				if $personne['metier']=='Visagiste'{
 					$name=$personne['nom'];
