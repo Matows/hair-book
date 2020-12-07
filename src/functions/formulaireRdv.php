@@ -25,6 +25,7 @@ function Affiche()
                 visage.style.display = "none";
         		}
         }
+    setInterval(function(){Affiche()}, 1)
 </script>
 <?php
 function formulaireRdv()
