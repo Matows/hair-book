@@ -1,3 +1,4 @@
+
 <script type="text/javascript">
 function Affiche()
     {
@@ -25,11 +26,13 @@ function Affiche()
                 visage.style.display = "none";
         		}
         }
-    setInterval(function(){Affiche()}, 1)
 </script>
 <?php
 function formulaireRdv()
 {
+	global $_prestations;
+	global $_liste_personnel;
+
 	$stringRet="
 	<form method='post'>
 		<article>
@@ -56,14 +59,14 @@ function formulaireRdv()
 			$stringRet=$stringRet."<select name=hairdresser size='1'><option selected>N'importe";
 
 			foreach ($_liste_personnel as $personne) {
-				if $personne['metier']=='Coiffeur'{
+				if ($personne['metier']=='Coiffeur'){
 					$name=$personne['nom'];
 					$stringRet=$stringRet."<option>$name";
 				}
 			}
 			$stringRet=$stringRet."</select><select name=visagiste size='1'><option selected>N'importe";
 			foreach ($_liste_personnel as $personne) {
-				if $personne['metier']=='Visagiste'{
+				if ($personne['metier']=='Visagiste'){
 					$name=$personne['nom'];
 					$stringRet=$stringRet."<option>$name";
 				}

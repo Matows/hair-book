@@ -1,5 +1,5 @@
 <?php
-$erreurs=[]
+$erreurs=[];
 if (bonnePrestation()&&bonnePersonne()&&bonTpsRdv()) {
 	if (isset($_POST['profilCap'])&&bonProfCap()) {
 		createRdv($_POST['prestations'], $_POST['dateRdv'], $_SESSION['client']['id'], $personnel, $_POST['profilCap']);
@@ -9,15 +9,14 @@ if (bonnePrestation()&&bonnePersonne()&&bonTpsRdv()) {
 	}
 }
 else {
-	$_SESSION['erreur']=$erreurs
-	header('Location:./index.php?page=rdv')
+	$_SESSION['erreur']=$erreurs;
 }
 
-
+//header('Location:./index.php?page=rdv');
 function bonnePrestation()
 {
-	if !(isset($_POST['prestations'])&&array_key_exists($_POST['prestations'], $_prestations)) {
-		$erreurs=$erreurs+['prestations'];
+	if (!(isset($_POST['prestations'])&&array_key_exists($_POST['prestations'], $_prestations))) {
+		array_push($erreurs, 'prestations');
 		return False;
 	}
 	return True;
@@ -41,7 +40,7 @@ function bonnePersonne()
 			}
 		}
 	}
-	$erreurs=$erreurs+[$valCurr];
+	array_push($erreurs, $valCurr);
 	return False;
 }
 
@@ -50,7 +49,7 @@ function bonTpsRdv()
 	if (isset($_POST['dateRdv'])&& is_available()) {
 		return True;
 	}
-	$erreurs=$erreurs+['dateRdv'];
+	array_push($erreurs, 'dateRdv');
 	return False;
 }
 
@@ -60,11 +59,11 @@ function bonProfCap()
 		$profCaps=getProfilsCaps();
 		while ($profil=mysqli_fetch_assoc($profCaps)) {
 			if ($_POST['profilCap']=$profil['longueur'].", ".$profil['qualite'].", ".$profil['couleur']) {
-				return True
+				return True;
 			}
 		}
 	}
-	$erreurs=$erreurs+['profilCap'];
+	array_push($erreurs, 'profilCap');
 	return False;
 }
 
@@ -74,5 +73,5 @@ function getProfilsCaps()
 	$client=$_SESSION['idCompteConnecte'];
 	$sql="SELECT * FROM profilCap WHERE `id_client`=$client";
 	$res=mysqli_query($conn, $sql);
-	return $res
+	return $res;
 }
