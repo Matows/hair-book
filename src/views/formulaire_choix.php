@@ -11,10 +11,12 @@
 		</aside>
 	</article>
 	<article>
-		<form action="formulaire_choix_submit" method="get" accept-charset="utf-8">
+		<form action="formulaire_choix_submit" method="POST" accept-charset="utf-8">
 			<button type="button" id="choix_formulaire_connection">me connecter</button>
 			<button type="button" id="choix_formulaire_creation">crée un formulaire sans connection</button>
 		</form>	
 	</article>
 
+<?php include("formulaire_capilaire.php");?>
+<?php include ("formulaire_paliraire_nonconnect.php");?>
 </div>
