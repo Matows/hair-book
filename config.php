@@ -21,24 +21,28 @@ $_prestations = [
         'type cheveux' => 'all',
         'type prestations'=>'coiffure',
         'description' => '',
+        'duree maximale' => '30',
     ],
     'Coloration' => [
         'prix' => [20],
         'type cheveux' => 'all',
         'type prestations'=>'coiffure',
         'description' => '',
+        'duree maximale' => '30',
     ],
     'Coupe - Coiffure'=> [
         'prix' => [25],
         'type cheveux' => 'all',
         'type prestations'=>'coiffure',
         'description' => 'Coupe avec Shampoing et Coiffure ensuite',
+        'duree maximale' => '30',
     ],
     'Coupe - Coiffure - Soin Divers' => [
         'prix' => [25],
         'type cheveux' => 'all',
         'type prestations'=>'coiffure',
         'description' => 'Coupe avec Shampoing, coiffure & soins divers des cheveux',
+        'duree maximale' => '30',
     ],
 
     'Suppléments Couleurs' => [
@@ -46,6 +50,7 @@ $_prestations = [
         'type cheveux' => 'all',
         'type prestations'=>'coiffure',
         'description' => 'Coloration en supplément à une coupe',
+        'duree maximale' => '30',
     ],
     //Mèches 
     'Mèches' => [
@@ -53,6 +58,7 @@ $_prestations = [
         'type cheveux' => 'all',
         'type prestations'=>'coiffure',
         'description' => 'Coloration de mèches',
+        'duree maximale' => '30',
     ],
     //BALAYAGE
     'Balayage' => [
@@ -60,6 +66,7 @@ $_prestations = [
         'type cheveux' => 'all',
         'type prestations'=>'coiffure',
         'description' =>'Balayage Classique',
+        'duree maximale' => '30',
     ],
     //PERMANENTE
     'Permanente' => [
@@ -67,6 +74,7 @@ $_prestations = [
         'type cheveux' =>'all',
         'type prestations'=>'coiffure',
         'description' =>'Frisage de cheveux',
+        'duree maximale' => '30',
     ],
     //Lissage
     'Lissage Brésilien' => [
@@ -74,6 +82,7 @@ $_prestations = [
         'type cheveux' => 'all',
         'type prestations'=>'coiffure',
         'description' => 'soin des cheveux comblant le manque de kératine.',
+        'duree maximale' => '30',
     ],
     //VISAGE
     'Epilation' => [
@@ -81,6 +90,7 @@ $_prestations = [
         'type cheveux' => 'all',
         'type prestations'=>'visage',
         'description' => 'Epilation de la face.',
+        'duree maximale' => '30',
     ],
 ];
 $_type_cheveux = [
