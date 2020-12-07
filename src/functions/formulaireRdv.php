@@ -7,13 +7,13 @@ function Affiche()
         var coiffure2 = document.getElementById('hairdresser');
         var visage = document.getElementById('visagiste');
         
-        if(selection.id == "coiffure")
+        if(selection == "coiffure")
             {
                 coiffure1.style.display = "block";
                 coiffure2.style.display = "block";
                 visage.style.display = "none";
                 }
-        else if (selection.id == "visage")
+        else if (selection == "visage")
             {
                 coiffure1.style.display = "none";
                 coiffure2.style.display = "none";
@@ -26,7 +26,7 @@ function Affiche()
                 visage.style.display = "none";
         		}
     }
-    window.setInterval(function(){Affiche()},1);
+    window.setInterval(function(){Affiche()},20);
 </script>
 <?php
 function formulaireRdv()
@@ -38,14 +38,14 @@ function formulaireRdv()
 	<form method='post'>
 		<article>
 
-			<h5>Prestations</h5><select name='prestations' size='1'><option value='' selected>---";
+			<h5>Prestations</h5><select name='prestations' id='prestations' size='1'><option value='' selected>---";
 
 			foreach ($_prestations as $prestation => $infos) {
 				$typePres=$infos['type prestations'];
 				$stringRet=$stringRet."<option value=$typePres>$prestation";
 			}
 
-			$stringRet=$stringRet."</select><select name='profilCap' size='1'>";
+			$stringRet=$stringRet."</select><select name='profilCap' id='profilCap' size='1'>";
 
 			$profCaps=getProfilsCaps();
 			while ($row = mysqli_fetch_assoc($profCaps)) {
@@ -56,7 +56,7 @@ function formulaireRdv()
 			}
 			$stringRet=$stringRet."</select>";
 
-			$stringRet=$stringRet."<select name=hairdresser size='1'><option selected>N'importe";
+			$stringRet=$stringRet."<select name='hairdresser' id='hairdresser' size='1'><option selected>N'importe";
 
 			foreach ($_liste_personnel as $personne) {
 				if ($personne['metier']=='Coiffeur'){
@@ -64,7 +64,7 @@ function formulaireRdv()
 					$stringRet=$stringRet."<option>$name";
 				}
 			}
-			$stringRet=$stringRet."</select><select name=visagiste size='1'><option selected>N'importe";
+			$stringRet=$stringRet."</select><select name='visagiste' id='visagiste' size='1'><option selected>N'importe";
 			foreach ($_liste_personnel as $personne) {
 				if ($personne['metier']=='Visagiste'){
 					$name=$personne['nom'];
