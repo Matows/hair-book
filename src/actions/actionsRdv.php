@@ -10,7 +10,7 @@ if (bonnePrestation()&&bonnePersonne()&&bonTpsRdv()) {
 }
 else {
 	$_SESSION['erreur']=$erreurs
-	header('Location:./index.php?PAGE=rdv')
+	header('Location:./index.php?page=rdv')
 }
 
 

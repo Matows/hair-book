@@ -36,14 +36,18 @@ function formulaireRdv()
 			<h5>Prestations</h5><select name='prestations' size='1'>";
 
 			foreach ($_prestations as $prestation => $infos) {
-				$stringRet=$stringRet."<option id=$infos['type prestations']>$prestation";
+				$typePres=$infos['type prestations'];
+				$stringRet=$stringRet."<option id=$typePres>$prestation";
 			}
 
 			$stringRet=$stringRet."</select><select name='profilCap' size='1'>"
 
 			$profCaps=getProfilsCaps();
-			foreach ($profCaps as $profCap => $infos) {
-				$stringRet=$stringRet."<option>$profCap['longueur'], $profCap['qualite'], $profCap['couleur']";
+			while ($row = mysqli_fetch_assoc($profCaps)) {
+				$long=$row['longueur'];
+				$qual=$row['qualite'];
+				$coul=$row['couleur'];
+				$stringRet=$stringRet."<option>$long, $qual, $coul";
 			}
 			$stringRet=$stringRet."</select>"
 
@@ -51,13 +55,15 @@ function formulaireRdv()
 
 			foreach ($_liste_personnel as $personne) {
 				if $personne['coiffure']{
-					$stringRet=$stringRet."<option>$personne['nom']"
+					$name=$personne['nom'];
+					$stringRet=$stringRet."<option>$name";
 				}
 			}
 			$stringRet=$stringRet."</select><select name=visagiste size='1'><option selected>N'importe"
 			foreach ($_liste_personnel as $personne) {
 				if !$personne['coiffure']{
-					$stringRet=$stringRet."<option>$personne['nom']"
+					$name=$personne['nom'];
+					$stringRet=$stringRet."<option>$name";
 				}
 			}
 
