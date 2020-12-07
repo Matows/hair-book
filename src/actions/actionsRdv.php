@@ -70,12 +70,9 @@ function bonProfCap()
 
 function getProfilsCaps()
 {
-	global $db;
-	$sql="SELECT $_SESSION['idCompteConnecte'] FROM client";
-	$res=mysqli_query($db, $sql);
-	$client=mysqli_fetch_assoc($res);
-	$client=$client['id'];	
+	global $conn;
+	$client=$_SESSION['idCompteConnecte'];
 	$sql="SELECT * FROM profilCap WHERE `id_client`=$client";
-	$res=mysqli_query($db, $sql);
+	$res=mysqli_query($conn, $sql);
 	return $res
 }

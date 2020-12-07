@@ -71,12 +71,4 @@ function formulaireRdv()
 			<article><label for='dateRdv'>Date et heure du rendez-vous :</label><input type='datetime-local' name='dateRdv' min=date('yyyy-MM-ddThh:mm')></article><article><input type='submit' method='post' name ='setNewRdv' value='Définir un nouveau rendez-vous'></article></form>";
 	return $stringRet;
 }
-function getProfilsCaps()
-{
-	global $conn;
-	$client=$_SESSION['idCompteConnecte'];
-	$sql="SELECT * FROM profilCap WHERE `id_client`=$client";
-	$res=mysqli_query($conn, $sql);
-	return $res
-}
 ?>
