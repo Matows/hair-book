@@ -11,6 +11,8 @@ $_PAGE_LIST = [
 ];
 
 include(__DIR__ . "/actions/page_vars.php");
+include(__DIR__ . "/actions/functionLogin.php");
+include(__DIR__ . "/actions/actionLogin.php");
 include(__DIR__ . "/actions/actionsRdv.php");
 include(__DIR__ . "/actions/action_prestation.php");
 include(__DIR__ . "/views/formulaire_base.php");
