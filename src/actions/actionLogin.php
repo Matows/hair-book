@@ -1,5 +1,4 @@
 <?php
-global $conn;
 
 if (!isset($_SESSION["userLogedIn"])){
 	$_SESSION["userLogedIn"]=false;
@@ -17,7 +16,7 @@ if (isset($_GET) && isset($_PAGE)){
 if (isset($_POST) && isset($_POST["connect"]) && $_POST["connect"]=="Login") {
 
 	$users=chargeusers($conn);
-	$errorInForm=False;
+	$errorInForm=false;
 	
 	if (isset($_POST["username"]) && trim($_POST["username"]) && isuser($users,$_POST["username"])) {
 		$_SESSION["username"]=htmlspecialchars($_POST["username"],ENT_QUOTES);
@@ -84,7 +83,7 @@ if (!$errorInForm) {
 	$_SESSION["userLogedIn"]=false;
 	header("Location: ./index.php?page=login&signoption=in");
 	
-} else{
+} else {
 	header("Location: ./index.php?page=login&signoption=up&error=true");
 }
 
@@ -95,3 +94,4 @@ if (isset($_GET) && isset($_GET["logout"]) && $_GET["logout"] == "true") {
 	$_SESSION["idUser"]=-1;
 	header("Location: ./index.php");
 }
+
