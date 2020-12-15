@@ -21,6 +21,9 @@
                 <li><a href="./index.php?page=prestation">Prestations</a></li>
                 <li><a href="./index.php?page=contact">Contact</a></li>
                 <li><a href="./index.php?page=formulaire_base">formulaire capilaire</a></li>
+                <li id="notConnected1"><a href="./index.php?page=login">Se connecter</a></li>
+                <li id="notConnected2"><a href="./index.php?page=signUp">S'inscrire</a></li>
+                <li id="connected"><a href="./index.php?page=account">Compte Personnel</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,3 +42,23 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
+<?php
+if (!$_SESSION["userLogedIn"]) {
+    ?>
+    <script type="text/javascript">
+        nc1=document.getElementById("notConnected1");
+        removeElement(nc1);
+        nc2=document.getElementById("notConnected2");
+        removeElement(nc2);
+    </script>
+    <?php
+}
+else {
+    ?>
+    <script type="text/javascript">
+        nc1=document.getElementById("connected");
+        removeElement(nc1);
+    </script>
+    <?php
+}
+?>

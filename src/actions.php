@@ -5,6 +5,9 @@ $_PAGE_LIST = [
     'personnel'=>'Presentation du personnel',
     'prestation'=>'Prestations proposées',
     'contact'=>'Contact',
+    'login'=>'Se connecter',
+    'signUp'=>'S\'inscrire',
+    'account'=>'Votre compte',
 ];
 
 include(__DIR__ . "/actions/page_vars.php");
