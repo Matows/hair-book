@@ -5,7 +5,7 @@ if (isset($_SESSION["userLogedIn"]) and !$_SESSION["userLogedIn"]) {
 	afficheFormSignUp();
 	?>
 	<p>Or</p>
-	<button type="button" onclick="location.href='index.php?page=login'">Login</button>
+	<button type="button" onclick="location.href='index.php?page=login'">Se connecter</button>
 	<?php
 	echo "</section>";
 }
