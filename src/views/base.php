@@ -23,7 +23,8 @@
                 <li><a href="./index.php?page=formulaire_base">formulaire capilaire</a></li>
                 <li id="notConnected1"><a href="./index.php?page=login">Se connecter</a></li>
                 <li id="notConnected2"><a href="./index.php?page=signUp">S'inscrire</a></li>
-                <li id="connected"><a href="./index.php?page=account">Compte Personnel</a></li>
+                <li id="connected1"><a href="./index.php?page=account">Compte Personnel</a></li>
+                <li id="connected2"><a href='./index.php?logout=true'>Se déconnecter</a></li>
                 </ul>
             </nav>
         </div>
@@ -56,8 +57,10 @@ if (!$_SESSION["userLogedIn"]) {
 else {
     ?>
     <script type="text/javascript">
-        nc1=document.getElementById("connected");
-        removeElement(nc1);
+        c1=document.getElementById("connected1");
+        removeElement(c1);
+        c2=document.getElementById("connected2");
+        removeElement(c2);
     </script>
     <?php
 }
