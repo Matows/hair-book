@@ -11,7 +11,7 @@ function afficheprestation($pres) {
         }
 
         ?>
-        <li>
+        <li class="box">
             <strong><?= $nomPresta ?></strong>
             <ul>
                 

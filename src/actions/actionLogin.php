@@ -26,6 +26,7 @@ if(isset($_POST["username"]) and isset($_POST["passwd"]))
       $_SESSION["connected"] = True;
       $rez=getID($_POST['username']);
       $_SESSION["idCompteConnecte"]=$rez;
+      $_SESSION['username']=$_POST['username'];
       header('Location: https://sb.sinux.sh/hairbook/index.php?page=accueil');
     }
     else 

@@ -47,7 +47,7 @@ function formulaireRdv()
 				$typePres=$infos['type prestations'];
 				$stringRet=$stringRet."<option value=$typePres>$prestation";
 			}
-			if ($_SESSION['connected']){
+			if ($_SESSION['connected'] and (!getIDprofile($_SESSION['idCompteConnecte'])==0)){
 				$stringRet=$stringRet."</select><select name='profilCap' id='profilCap' size='1'>";
 				$profCaps=getProfilsCaps();
 				while ($row = mysqli_fetch_assoc($profCaps)) 

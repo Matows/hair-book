@@ -4,6 +4,7 @@
  *
  */
 $_website_name= 'HairBook';
+$_ADMIN_PASS='bisounours';
 $_horaires = [
     'Lundi'=> ['8h-12h', '14h-17h'],
     'Mardi'=>['8h-12h', '14h-17h'],
@@ -100,22 +101,22 @@ $_type_cheveux = [
 ];
 
 $_liste_personnel = [
-  ["nom" =>"Java",
-   "prenom"=>"David",
+  ["nom" =>"Glunsky",
+   "prenom"=>"Goliath",
    "metier" => 'Coiffeur', 
-   "specialite"=> "évenementiel (mariage....)",
-   "description" => "CAP à Lioncourt.... blalblabla"],
+   "specialite"=> "évenementiel",
+   "description" => "Bac Professionnel à Paris 11."],
 
-    ["nom" => "Web",
-     "prenom" =>"Luc",
-     "specialite" => "évenementiel (mariage....)",
+    ["nom" => "Dupont",
+     "prenom" =>"Pierre",
+     "specialite" => "Epilateur expert.",
      "metier" => 'Visagiste',
-     "description" => "CAP à Lioncourt.... blalblabla",
+     "description" => "CAP estheticien a Lioncourt,  Parfait pour les occasions spéciales (mariage, grandes occasions..)",
   ],
-  ["nom" =>'Empereur',
-   "prenom"=>'Jean-Charles',
+  ["nom" =>'Delacourbetierre',
+   "prenom"=>'Jean',
    "metier" => 'Coiffeur',
-   "specialite" => "évenementiel (mariage....)",
-    "description" => "Aggregation cheveux à Lioncourt..."],
+   "specialite" => "évenementiel (conventions,mariage..)",
+    "description" => " BEP coiffure à Lioncourt..."],
 ];
  ?>

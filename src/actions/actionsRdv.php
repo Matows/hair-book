@@ -2,25 +2,36 @@
 $erreurs=array();
 if (bonnePrestation()&&bonnePersonne()&&bonTpsRdv()&&bonProfCap()) 
 	{
+		
 		createRdv($_POST['prestations'], $_POST['dateRdv'], $_SESSION['client']['id'], $personnel, $_POST['profilCap']);
 	}
 
 
 elseif(bonnePrestation() && bonnePersonne()&& bonTpsRdv() &&bonneCreationProfCap()) 
 {
+	
 	$qualite=$_POST['type de cheveux'];
 	$longueur=$_POST['longueur'];
 	$couleur=$_POST['couleur'];
 	$stringRet="".$_POST['type de cheveux'].$_POST['longueur'].$_POST['couleur'];
 	$sql="INSERT INTO profilCap(`longueur`, `qualite`,`couleur`) VALUES ('$longueur','$qualite','$couleur');";
 	mysqli_query($conn,$sql);
-	$sql2="SELECT * FROM profilCap WHERE (`longueur` ,`qualite`,`couleur`)=('$longueur', '$qualite', '$couleur');";
-	mysqli_query($conn,$sql2);
-	$res=mysqli_fetch_assoc($conn,$sql2);
-	var_dump($res);
+	if ($_SESSION['connected']) {
+		
+		$sql2="SELECT * FROM profilCap WHERE (`longueur` ,`qualite`,`couleur`)=('$longueur', '$qualite', '$couleur');";
+		$res=mysqli_query($conn,$sql2);
+		$row=mysqli_fetch_assoc($res);
+		var_dump($row);
+		$idProfileCaps=$row['id_profile'];
+		$usrId=$_SESSION['idCompteConnecte'];
+		$sql3="UPDATE `client` SET `id_profile` = '$idProfileCaps' WHERE `id` = '$usrId';";
+		mysqli_query($conn,$sql3);
+		var_dump(mysqli_query($conn,$sql3));
+		}
 	createRdv($_POST['prestations'], $_POST['dateRdv'], $_SESSION['client']['id'], $personnel, $stringRet);
 }
 else{
+	
 	$_SESSION['erreur']=$erreurs;
 }
 function bonneCreationProfCap()
