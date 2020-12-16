@@ -1,17 +1,39 @@
 <?php
 $erreurs=array();
-if (bonnePrestation()&&bonnePersonne()&&bonTpsRdv()) {
-	if (isset($_POST['profilCap'])&&bonProfCap()) {
+if (bonnePrestation()&&bonnePersonne()&&bonTpsRdv()&&bonProfCap()) 
+	{
 		createRdv($_POST['prestations'], $_POST['dateRdv'], $_SESSION['client']['id'], $personnel, $_POST['profilCap']);
 	}
-	else {
-		createRdv($_POST['prestations'], $_POST['dateRdv'], $_SESSION['client']['id'], $personnel);
-	}
+
+
+elseif(bonnePrestation() && bonnePersonne()&& bonTpsRdv() &&bonneCreationProfCap()) 
+{
+	$qualite=$_POST['type de cheveux'];
+	$longueur=$_POST['longueur'];
+	$couleur=$_POST['couleur'];
+	$stringRet="".$_POST['type de cheveux'].$_POST['longueur'].$_POST['couleur'];
+	$sql="INSERT INTO profilCap(`longueur`, `qualite`,`couleur`) VALUES ('$longueur','$qualite','$couleur');";
+	mysqli_query($conn,$sql);
+	$sql2="SELECT * FROM profilCap WHERE (`longueur` ,`qualite`,`couleur`)=('$longueur', '$qualite', '$couleur');";
+	mysqli_query($conn,$sql2);
+	$res=mysqli_fetch_assoc($conn,$sql2);
+	var_dump($res);
+	createRdv($_POST['prestations'], $_POST['dateRdv'], $_SESSION['client']['id'], $personnel, $stringRet);
 }
-else {
+else{
 	$_SESSION['erreur']=$erreurs;
 }
-
+function bonneCreationProfCap()
+{
+	global $_type_cheveux;
+	if (isset($_POST['type de cheveux'])&&isset($_POST['longueur'])&&isset($_POST['couleur'])) {
+		if (in_array($_POST['type de cheveux'], $_type_cheveux['qualité']) && in_array($_POST['longueur'], $_type_cheveux['longueur'])&&in_array($_POST['couleur'], $_type_cheveux['couleur'])){
+			return True;
+		}
+	}
+	$erreurs[]="Création Profil Capilaire";
+	return False;
+}
 //header('Location:./index.php?page=rdv');
 function bonnePrestation()
 {
@@ -72,7 +94,15 @@ function getProfilsCaps()
 {
 	global $conn;
 	$client=$_SESSION['idCompteConnecte'];
-	$sql = 'SELECT client.id,nom,longueur,qualite,couleur FROM client JOIN profilCap ON client.id_profile=profilCap.id WHERE client.id = ' . $client;
+	$sql = "SELECT client.id,nom,longueur,qualite,couleur FROM client JOIN profilCap ON client.id_profile=profilCap.id WHERE client.id = " . $client;
 	$res=mysqli_query($conn, $sql);
 	return $res;
+}
+function getIDprofile($id)
+{
+  global $conn;
+  $sql="SELECT client.id_profile FROM client WHERE client.id = '$id';";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    return $row["id_profile"];
 }

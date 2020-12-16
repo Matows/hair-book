@@ -1,30 +1,29 @@
 <section>
-	<h1>Présentation du personnel :</h1>
-	<div>
-		<div>
-			<h2>Directeur</h2>
-			<p>nomDirecteur</p>
-			<img src="<?= $_STATIC ?>/img/directeur.jpg"></img>
-		</div>
-		<div>
-			<?php 
-				foreach ($_liste_personnel as $key) {
-                    echo'<table class="employes">';
-                    echo '<tr>';
-                    echo '<th class="titre">'.array_keys($_liste_personnel, $key, TRUE)[0].'</th>';
-                    echo '</tr>';
-                    echo '<tr>';
-                    echo '<td class="nom">'.$key['nom'].'</td>';
-                    echo '<td class="prenom">'.$key['prenom'].'</td>';
-                    echo '</tr>';
-                    echo '<tr>';
-                    echo '<td>'.$key['specialite'].'</td>';
-                    echo '<td>'.$key['description'].'</td>';
-                    echo '</tr>';
-                    echo "</table>";
-                                                  }
+    <h1>Présentation du personnel :</h1>
+    <div>
+        <!--<div>
+            <h2 class="has-text-primary">Directeur</h2>
+            <p class="has-text-info">nomDirecteur</p>
+            <img src="<?= $_ROOT_URL ?>/static/img/directeur.jpg"></img>
+        </div>-->
+        <div class="box">
+            <div class="content">
+            <ul>
+            <?php
+            foreach ($_liste_personnel as $personne) {
+                ?>
+                <li> <?= $personne['prenom'] . ' ' .  $personne['nom'] ?>
+                    <ul>
+                        <li>Spécialité : <?= $personne['specialite'] ?> </li>
+                        <li>Études : <?= $personne['description'] ?> </li>
+                    </ul>
+                </li>
+                <?php
+            }
             ?>
-			
-		</div>
-	</div>
+            </ul>
+            </div>
+
+        </div>
+    </div>
 </section>

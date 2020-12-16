@@ -47,18 +47,46 @@ function formulaireRdv()
 				$typePres=$infos['type prestations'];
 				$stringRet=$stringRet."<option value=$typePres>$prestation";
 			}
-
-			$stringRet=$stringRet."</select><select name='profilCap' id='profilCap' size='1'>";
-
-			$profCaps=getProfilsCaps();
-			while ($row = mysqli_fetch_assoc($profCaps)) {
-				$long=$row['longueur'];
-				$qual=$row['qualite'];
-				$coul=$row['couleur'];
-				$stringRet=$stringRet."<option>$long, $qual, $coul";
+			if ($_SESSION['connected']){
+				$stringRet=$stringRet."</select><select name='profilCap' id='profilCap' size='1'>";
+				$profCaps=getProfilsCaps();
+				while ($row = mysqli_fetch_assoc($profCaps)) 
+				{
+					$long=$row['longueur'];
+					$qual=$row['qualite'];
+					$coul=$row['couleur'];
+					$stringRet=$stringRet."<option>$long, $qual, $coul";
+				}
+				$stringRet=$stringRet."</select>";
 			}
-			$stringRet=$stringRet."</select>";
-
+			else{
+			$stringRet=$stringRet."</select><section id='profilCap'>
+	<ul>
+		<li>
+			<SELECT name='type de cheveux' size='1'>
+				<OPTION>frisé</OPTION>
+				<OPTION>plat</OPTION>
+			</SELECT>
+		</li>
+		<li>
+			<SELECT name='longueur' size='1'>
+				<OPTION>court</OPTION>
+				<OPTION>mi-long</OPTION>
+				<OPTION>long</OPTION>
+			</SELECT>
+		</li>
+		<li>
+			<SELECT name='couleur' size='1'>
+				<OPTION>roux</OPTION>
+				<OPTION>noir</OPTION>
+				<OPTION>brun</OPTION>
+				<OPTION>blond</OPTION>
+			</SELECT>
+		</li>
+	</ul>
+	</section>";
+			
+}
 			$stringRet=$stringRet."<select name='hairdresser' id='hairdresser' size='1'><option selected>N'importe";
 
 			foreach ($_liste_personnel as $personne) {

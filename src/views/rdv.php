@@ -1,5 +1,4 @@
-<section>
-	<h3>Prendre un rendez-vous</h3>
+<section class="box" class="has-background-link-light">
 	<?php
 		echo formulaireRdv();
 	?>
