@@ -7,49 +7,35 @@
     <link rel="stylesheet" type="text/css" href="<?= $_ROOT_URL ?>/static/css/style.css" />
 </head>
 <body>
-    <header class="section">
-        <div class="container">
-            <nav class="navbar is-primary"  class="is-align-items-flex-start">
-            	<div class="navbar-brand" class="is-align-items-flex-start">
-            		<div class="navbar-item">
-		            	<a href="./index.php?page=accueil"  class="navbar-item" role="button"><?= $_website_name ?></a>
-		            </div>
-                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                      <span aria-hidden="true"></span>
-                      <span aria-hidden="true"></span>
-                      <span aria-hidden="true"></span>
-                    </a>
-            	</div>
-            	<div class="navbar-menu">
-	            	<div class="navbar-start" class="is-align-items-flex-start">
-		            	<div class="is-align-items-flex-start">
-		                    <a href="./index.php?page=accueil" class="navbar-item">Accueil</a>
-		                </div>
-		                <div class="is-align-items-flex-start">    
-		                    <a href="./index.php?page=rdv" class="navbar-item">Rendez-Vous</a>
-		                </div>
-		                <div class="is-align-items-flex-start">    
-		                    <a href="./index.php?page=personnel" class="navbar-item">Présentation du personnel</a>
-		                </div>
-		                <div class="is-align-items-flex-start">    
-		                    <a href="./index.php?page=prestation" class="navbar-item">Prestations</a>
-		                </div>
-		                <div class="is-align-items-flex-start">    
-		                    <a href="./index.php?page=contact" class="navbar-item">Contact</a>
-		                </div>
-	            	</div>
-	                <div class="navbar-end" class="is-align-items-flex-start">
-		                <div class="is-align-items-flex-start">
-		                    <a href="./index.php?page=compte" class="navbar-item button">Compte</a>
-		                </div>
-		                <div class="is-align-items-flex-start">    
-		                    <a href="./index.php?page=administration" class="navbar-item button" aria-hidden="true">Administration</a>
-		                </div>    
-	            	</div>
-            	</div>
-            </nav>
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <a href="./index.php?page=accueil" class="navbar-item title is-2"><?= $_website_name ?></a>
+            </div>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
         </div>
-    </header>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="./index.php?page=accueil" class="navbar-item">Accueil</a>
+                <a href="./index.php?page=rdv" class="navbar-item">Rendez-Vous</a>
+                <a href="./index.php?page=personnel" class="navbar-item">Présentation du personnel</a>
+                <a href="./index.php?page=prestation" class="navbar-item">Prestations</a>
+                <a href="./index.php?page=contact" class="navbar-item">Contact</a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a href="./index.php?page=compte" class="button">Compte</a>
+                        <a href="./index.php?page=administration" class="button">Administration</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
     <main class="section">
         <div class="container">
             <h2 class="title is-2" class="has-text-centered" class="has-text-primary"><?= $_PAGE_NAME ?></h2>
