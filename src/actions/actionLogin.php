@@ -4,7 +4,6 @@ $_SESSION['idCompteConnecte']=1;
 $_ROOT_URL = "/hairbook";
 
 $conn = mysqli_connect("127.0.0.1:3308", "hairbook", "N9Ux46la", "hairbook");
-var_dump($_POST);
 $mdpint=$_POST['passwd'];
 sha1($mdpint);
 $user=$_POST['username'];
@@ -15,11 +14,9 @@ if(isset($_POST["username"]) and isset($_POST["passwd"]))
    {
     echo "zeez";
      $sql="SELECT * FROM client WHERE username='$user'";
-     var_dump($sql);
      
      mysqli_query($conn,$sql);
      $mdp=getMotDePass($user);
-     var_dump($mdp);
      if ($mdp==sha1($_POST['passwd'])) 
      {
        $erreur=" login réussi ! ";
@@ -33,6 +30,7 @@ if(isset($_POST["username"]) and isset($_POST["passwd"]))
     {
       $erreur = " mot de passe incorrect ";
       $_SESSION["connected"]=False;
+      header('Location: https://sb.sinux.sh/hairbook/index.php?page=compte');
      }
  }
 }

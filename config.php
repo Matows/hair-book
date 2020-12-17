@@ -95,7 +95,7 @@ $_prestations = [
     ],
 ];
 $_type_cheveux = [
-    'longeur' => ['court', 'mi-long', 'long'],
+    'longueur' => ['court', 'mi-long', 'long'],
     'qualité' => ['frisé', 'plat'],
     'couleur' => ['roux', 'noir', 'brun', 'blond']
 ];

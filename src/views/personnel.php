@@ -1,5 +1,5 @@
 <section>
-    <h1>Présentation du personnel :</h1>
+    <h1 class="has-text-primary">Présentation du personnel :</h1>
     <div>
         <!--<div>
             <h2 class="has-text-primary">Directeur</h2>
@@ -12,10 +12,10 @@
             <?php
             foreach ($_liste_personnel as $personne) {
                 ?>
-                <li> <?= $personne['prenom'] . ' ' .  $personne['nom'] ?>
+                <li class="box"> <?= $personne['prenom'] . ' ' .  $personne['nom'] ?>
                     <ul>
-                        <li>Spécialité : <?= $personne['specialite'] ?> </li>
-                        <li>Études : <?= $personne['description'] ?> </li>
+                        <li class="has-text-success">Spécialité : <?= $personne['specialite'] ?> </li>
+                        <li class="has-text-success">Études : <?= $personne['description'] ?> </li>
                     </ul>
                 </li>
                 <?php

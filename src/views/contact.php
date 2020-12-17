@@ -2,7 +2,7 @@
     <h3 class="has-text-primary">
         Contacts :
     </h3>
-    <ul>
+    <ul class="box">
         <li class="has-text-primary">
             Téléphone :
             <ul>
@@ -12,7 +12,7 @@
             </ul>
         </li>
     </ul>
-    <ul>
+    <ul class="box">
         <li class="has-text-primary">
             Email :
             <ul>
@@ -22,7 +22,7 @@
             </ul>
         </li>
     </ul>
-    <ul>
+    <ul class="box">
         <li class="has-text-primary">
             Adresse postale :
             <ul>

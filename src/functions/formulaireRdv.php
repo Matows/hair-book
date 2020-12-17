@@ -2,7 +2,7 @@
 <script type="text/javascript">
 function Affiche()
     {
-        var selection = document.getElementById('prestations').value;
+        var selection = document.getElementById(document.getElementById('prestations').value).getAttribute('name');
         var coiffure1 = document.getElementById('profilCap');
         var coiffure2 = document.getElementById('hairdresser');
         var visage = document.getElementById('visagiste');
@@ -41,13 +41,13 @@ function formulaireRdv()
 	<form method='post'>
 		<article>
 
-			<h5>Prestations</h5><select name='prestations' id='prestations' size='1'><option value='' selected>---";
+			<h5>Prestations</h5><select name='prestations' id='prestations' size='1'><option id='null' name='' value='null' selected>---";
 
 			foreach ($_prestations as $prestation => $infos) {
 				$typePres=$infos['type prestations'];
-				$stringRet=$stringRet."<option value=$typePres>$prestation";
+				$stringRet=$stringRet."<option id='$prestation' name='$typePres' value='$prestation'>$prestation";
 			}
-			if ($_SESSION['connected'] and (!getIDprofile($_SESSION['idCompteConnecte'])==0)){
+			if ($_SESSION['connected'] && (!getIDprofile($_SESSION['idCompteConnecte'])==0)){
 				$stringRet=$stringRet."</select><select name='profilCap' id='profilCap' size='1'>";
 				$profCaps=getProfilsCaps();
 				while ($row = mysqli_fetch_assoc($profCaps)) 
@@ -63,7 +63,7 @@ function formulaireRdv()
 			$stringRet=$stringRet."</select><section id='profilCap'>
 	<ul>
 		<li>
-			<SELECT name='type de cheveux' size='1'>
+			<SELECT name='qualite' size='1'>
 				<OPTION>frisé</OPTION>
 				<OPTION>plat</OPTION>
 			</SELECT>

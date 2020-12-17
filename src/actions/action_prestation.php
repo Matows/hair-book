@@ -12,7 +12,7 @@ function afficheprestation($pres) {
 
         ?>
         <li class="box">
-            <strong><?= $nomPresta ?></strong>
+            <strong class="has-text-primary"><?= $nomPresta ?></strong>
             <ul>
                 
                 <?= !empty($carac['description']) ? '<li>' . $carac['description'] . '</li>' : '' ?>
